@@ -174,3 +174,41 @@ Pull-системы мониторинга:
 
 ---
 
+#### 7. Склонируйте себе репозиторий и запустите TICK-стэк, используя технологии docker и docker-compose.
+
+В виде решения на это упражнение приведите скриншот веб-интерфейса ПО chronograf (http://localhost:8888).
+
+**Ответ**
+
+Запустил TICK-стэк, скриншот Сhronograf:
+
+![alt text](Pictures/pic01.jpg)
+
+---
+
+#### 8. Перейдите в веб-интерфейс Chronograf (http://localhost:8888) и откройте вкладку Data explorer.
+
+- Нажмите на кнопку Add a query
+- Изучите вывод интерфейса и выберите БД telegraf.autogen
+- В measurments выберите cpu->host->telegraf-getting-started, а в fields выберите usage_system. Внизу появится график утилизации cpu.
+- Вверху вы можете увидеть запрос, аналогичный SQL-синтаксису. Поэкспериментируйте с запросом, попробуйте изменить группировку и интервал наблюдений.
+
+Для выполнения задания приведите скриншот с отображением метрик утилизации cpu из веб-интерфейса.
+
+**Ответ**
+
+Отобразил график утилизации CPU машины, на которой запущен TICK-стэк.
+
+![alt text](Pictures/pic02.jpg)
+
+![alt text](Pictures/pic03.jpg)
+
+---
+
+#### 9. Изучите список [telegraf inputs](https://github.com/influxdata/telegraf/tree/master/plugins/inputs). Добавьте в конфигурацию telegraf следующий плагин - [docker](https://github.com/influxdata/telegraf/tree/master/plugins/inputs/docker):
+
+```bash
+[[inputs.docker]]
+  endpoint = "unix:///var/run/docker.sock"
+```
+После настройке перезапустите telegraf, обновите веб интерфейс и приведите скриншотом список measurments в веб-интерфейсе базы telegraf.autogen . Там должны появиться метрики, связанные с docker.
