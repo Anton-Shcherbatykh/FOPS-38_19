@@ -27,18 +27,30 @@
 
 ### Задание 2
 
-Изучите самостоятельно ресурсы:
-
-PromQL tutorial for beginners and humans.
-Understanding Machine CPU usage.
-Introduction to PromQL, the Prometheus query language.
 Создайте Dashboard и в ней создайте Panels:
 
-утилизация CPU для nodeexporter (в процентах, 100-idle);
-CPULA 1/5/15;
-количество свободной оперативной памяти;
-количество места на файловой системе.
+- утилизация CPU для nodeexporter (в процентах, 100-idle);
+- CPULA 1/5/15;
+- количество свободной оперативной памяти;
+- количество места на файловой системе.
+  
 Для решения этого задания приведите promql-запросы для выдачи этих метрик, а также скриншот получившейся Dashboard.
+
+### Выполнение
+
+Создал Dashboard и в ней панели с указанными выше по тексту метриками.
+
+![alt text](Pictures/pic04.jpg)
+
+Promql-запросы, использованные при создании панелей:
+
+- утилизация CPU для nodeexporter (в процентах, 100-idle); 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
+- CPULA 1/5/15; node_load1 node_load5 node_load15 в каждой отдельной строке запроса
+
+![alt text](Pictures/pic05.jpg)
+  
+- количество свободной оперативной памяти; node_memory_MemFree_bytes / 1024 / 1024 / 1024
+- количество места на файловой системе. node_filesystem_avail_bytes{mountpoint="/", fstype!~"tmpfs|overlay"} / 1024 / 1024 / 1024
 
 ### Задание 3
 
