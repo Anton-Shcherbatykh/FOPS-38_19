@@ -23,9 +23,7 @@
 
 ![alt text](Pictures/pic03.jpg)
 
-4.  
-
-
+---
 
 ### Задание 2
 
