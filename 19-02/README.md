@@ -44,13 +44,13 @@
 
 Promql-запросы, использованные при создании панелей:
 
-- утилизация CPU для nodeexporter (в процентах, 100-idle); 100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)
-- CPULA 1/5/15; node_load1 node_load5 node_load15 в каждой отдельной строке запроса
+- утилизация CPU для nodeexporter (в процентах, 100-idle); ```100 - (avg(rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100)```
+- CPULA 1/5/15; ```node_load1 node_load5 node_load15``` в каждой отдельной строке запроса
 
 ![alt text](Pictures/pic05.jpg)
   
-- количество свободной оперативной памяти; node_memory_MemFree_bytes / 1024 / 1024 / 1024
-- количество места на файловой системе. node_filesystem_avail_bytes{mountpoint="/", fstype!~"tmpfs|overlay"} / 1024 / 1024 / 1024
+- количество свободной оперативной памяти; ```node_memory_MemFree_bytes / 1024 / 1024 / 1024```
+- количество места на файловой системе. ```node_filesystem_avail_bytes{mountpoint="/", fstype!~"tmpfs|overlay"} / 1024 / 1024 / 1024```
 
 ### Задание 3
 
