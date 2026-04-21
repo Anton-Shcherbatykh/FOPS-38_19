@@ -13,9 +13,18 @@
 
 1. Запускаем связку prometheus-grafana
 
+![alt text](Pictures/pic01.jpg)
 
+2.  Заходим в веб-интерфейс grafana
 
-2. 
+![alt text](Pictures/pic02.jpg)
+
+3.  Подключаем prometheus как источник данных
+
+![alt text](Pictures/pic03.jpg)
+
+4.  
+
 
 
 ### Задание 2
