@@ -82,4 +82,4 @@ Promql-запросы, использованные при создании па
 
 ### Выполнение
 
-[Листинг запрашиваемого файла](
+[Листинг запрашиваемого файла](https://github.com/Anton-Shcherbatykh/FOPS-38_19/blob/main/19-02/Files/%D0%9B%D0%B8%D1%81%D1%82%D0%B8%D0%BD%D0%B3%20dashboard%20Grafana.json)
