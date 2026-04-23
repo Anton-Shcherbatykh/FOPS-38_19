@@ -20,3 +20,8 @@ Free Cloud account имеет ограничения:
 
 ### Выполнение
 
+![alt text](Pictures/pic01.jpg)
+
+![alt text](Pictures/pic02.jpg)
+
+---
